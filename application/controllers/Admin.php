@@ -14,9 +14,12 @@ class Admin extends CI_Controller
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
+        $data['role'] = $this->db->get('user_role')->result_array();
+
+        $data['x'] = $this->db->get('user')->result_array();
+
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
-        // $this->load->view('templates/topbar', $data);
         $this->load->view('admin/index', $data);
         $this->load->view('templates/footer');
     }
@@ -31,7 +34,6 @@ class Admin extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
-        // $this->load->view('templates/topbar', $data);
         $this->load->view('admin/role', $data);
         $this->load->view('templates/footer');
     }
@@ -47,11 +49,10 @@ class Admin extends CI_Controller
         $this->db->where('id !=', 1);
         $data['menu'] = $this->db->get('user_menu')->result_array();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('templates/sidebar', $data);
         $this->load->view('admin/role-access', $data);
-        $this->load->view('templates/footer');
+        // $this->load->view('templates/footer');
     }
 
 

@@ -1,6 +1,6 @@
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-dark">
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -39,16 +39,16 @@
 
                                 <ul class="list-group list-group-unbordered mb-3">
                                     <li class="list-group-item">
-                                        <b>Nama</b> <a class="float-right"><?= $user['name']; ?></a>
+                                        <b>Nama</b> <span class="float-right"><?= $user['name']; ?></span>
                                     </li>
                                     <li class="list-group-item">
-                                        <b>Email</b> <a class="float-right"><?= $user['email']; ?></a>
+                                        <b>Email</b> <span class="float-right"><?= $user['email']; ?></span>
                                     </li>
                                     <li class="list-group-item">
-                                        <b>Phone</b> <a class="float-right"><?= $user['phone']; ?></a>
+                                        <b>Phone</b> <span class="float-right"><?= $user['phone']; ?></span>
                                     </li>
                                     <li class="list-group-item">
-                                        <b>Address</b> <a class="float-right"><?= $user['address']; ?></a>
+                                        <b>Address</b> <span class="float-right"><?= $user['address']; ?></span>
                                     </li>
                                 </ul>
                             </div>
